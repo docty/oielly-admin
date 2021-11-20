@@ -1,0 +1,12 @@
+[
+    { 
+        "id": 1,
+        "referenceId": "SDFGHJK",
+        "productId": "4HJ31",
+        "city": "Kumasi", 
+        "landmark": "Palace", 
+        "pickup": "GCB", 
+        "contact": "0247049416", 
+        "message": "Thank you" 
+    }
+]

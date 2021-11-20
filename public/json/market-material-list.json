@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "referenceId": "qwerty345678",
+        "marketId": "F5T67Y",
+        "marketName": "Poinj",
+        "location": "Tanoso",
+        "fullName": "Mary Ivy",
+        "clientId": "24524",
+        "numberOfEmployees" : 10,
+        "productCount": 13,
+        "balance": 40
+    },
+    {
+        "id": 2,
+        "referenceId": "sdfghjk98765",
+        "marketId": "E324245",
+        "marketName": "Flio",
+        "location": "Adum",
+        "fullName": "Henry Asiedu",
+        "clientId": "24524",
+        "numberOfEmployees" : 15,
+        "productCount": 5,
+        "balance": 50
+    }
+]

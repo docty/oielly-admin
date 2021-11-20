@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+     
+    font-size: 14px;
+    color: #4f5d77;
+    line-height: 1.5;
+    min-height: 100vh;
+    overflow-x: hidden;
+     
+}
+
+.errorMessage {
+    --tw-border-opacity: 1;
+    border-color: rgba(239,68,68,var(--tw-border-opacity)); 
+}

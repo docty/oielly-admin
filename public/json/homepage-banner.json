@@ -1,0 +1,11 @@
+[
+    { 
+        "id" : 1,
+        "referenceId": "DWE343F",
+        "productId": "WE465", 
+        "name": "Alipmo", 
+        "price": 70, 
+        "src": "./product.jpg",
+        "display": "true" 
+    }
+]

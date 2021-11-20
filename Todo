@@ -1,0 +1,31 @@
+######### GENERAL ############
+First item in breadcrumb should be nvigateable
+
+
+######### STAFF #######
+ 
+ 
+ 
+Other Information includes: date of birth, role, address, marital-status, religion, place of worship etc
+Upload a single image with a well defined size
+Delete is not working
+There should be automatic redirect when staff be found
+Send a mail to staff to reset their password
+Gender should not be auto selected
+Table items should be able to be sorted
+Add search box on table
+Add load more on scroll 
+Default image for staff should be no profile
+
+######### CLIENT #######
+Same features as staff
+loading spinner keeps spinning after submiting data
+Replace Tasks with  Markets
+Add Other Information such as address, 
+Can create a market from client page
+
+
+######### MARKET #######
+Client Id should be  an edit box with typed sugguestions
+Add number of product and wallet balance
+Profile, Edit, Delete are not working 

@@ -1,0 +1,190 @@
+import logo from '../assets/images/logo-sm.png';
+import logoDark from '../assets/images/logo-dark.png';
+import logoWhite from '../assets/images/logo-light.png';
+import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
+
+const Sidebar = () => {
+
+    const verticalMenu = () => {
+        const body = document.querySelector('body');
+        body?.classList.toggle('sidebar-enable');
+        992 <= (window.innerWidth) ? body?.classList.toggle("vertical-collpsed") : body?.classList.remove("vertical-collpsed");
+        console.log('clicked');
+    }
+    return (
+        <div className="vertical-menu">
+
+            <div className="navbar-brand-box">
+                <Link to={'/v1/dashboard'} className="logo logo-dark">
+                    <span className="logo-sm">
+                        <img src={logo} alt="" height="22" />
+                    </span>
+                    <span className="logo-lg">
+                        <img src={logoDark} alt="" height="20" />
+                    </span>
+                </Link>
+
+                <Link to={'/v1/dashboard'} className="logo logo-light">
+                    <span className="logo-sm">
+                        <img src={logo} alt="" height="22" />
+                    </span>
+                    <span className="logo-lg">
+                        <img src={logoWhite} alt="" height="20" />
+                    </span>
+                </Link>
+            </div>
+
+            <button type="button" className="btn btn-sm px-3 font-size-16 header-item waves-effect vertical-menu-btn" onClick={() => verticalMenu()}>
+                <i className="fa fa-fw fa-bars"></i>
+            </button>
+            <SideItems />
+        </div>
+    )
+}
+
+const SideItems = () => {
+
+    
+    useEffect(() => {
+         
+        
+    }, []);
+
+    return (
+        <div data-simplebar className="sidebar-menu-scroll">
+            <div id="sidebar-menu" style={{ padding: '0' }}>
+                <ul className="metismenu list-unstyled" id="side-menu">
+                    <li className={'mm-active'}>
+                        <Link to={'/v1/dashboard'} className={'active'}>
+                            <i className="uil-home-alt"></i>
+                            <span>Dashboard</span>
+                        </Link>
+                    </li>
+                    <li className="menu-title">Entries</li>
+                    <li>
+                        <a href="#staff" className="has-arrow waves-effect">
+                            <i className="uil-user-circle"></i>
+                            <span>Staff</span>
+                        </a>
+                        <ul className="sub-menu" >
+                            <li><Link to='/v1/entries/staff/add'>Add</Link></li>
+                            <li><Link to='/v1/entries/staff/list'>List</Link></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#client" className="has-arrow waves-effect">
+                            <i className="uil-user-square"></i>
+                            <span>Client</span>
+                        </a>
+                        <ul className="sub-menu" >
+                            <li><Link to={'/v1/entries/client/add'}>Add</Link></li>
+                            <li><Link to={'/v1/entries/client/list'}>List</Link></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="/" className="has-arrow waves-effect">
+                            <i className="uil-user"></i>
+                            <span>Guest</span>
+                        </a>
+                        <ul className="sub-menu" >
+                            <li><Link to={'/v1/entries/guest/list'}>List</Link></li>
+                        </ul>
+                    </li>
+                    <li className="menu-title">Market</li>
+                    <li>
+                        <a href="/" className="has-arrow waves-effect">
+                            <i className="uil-shopping-basket"></i>
+                            <span>Material</span>
+                        </a>
+                        <ul className="sub-menu" >
+                            <li><Link to={'/v1/market/material/add'}>Add</Link></li>
+                            <li><Link to={'/v1/market/material/list'}>List</Link></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="/" className="has-arrow waves-effect">
+                            <i className="uil-shopping-basket"></i>
+                            <span>Style</span>
+                        </a>
+                        <ul className="sub-menu" >
+                            <li><Link to={'/v1/market/style/add'}>Add</Link></li>
+                            <li><Link to={'/v1/market/style/list'}>List</Link></li>
+                        </ul>
+                    </li>
+                    <li className="menu-title">Products</li>
+                    <li>
+                        <a href="/" className="has-arrow waves-effect">
+                            <i className="uil-gold"></i>
+                            <span>Materials</span>
+                        </a>
+                        <ul className="sub-menu" >
+                            <li><Link to={'/v1/product/material/add'}>Add</Link></li>
+                            <li><Link to={'/v1/product/material/list'}>List</Link></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="/" className="has-arrow waves-effect">
+                            <i className="uil-store"></i>
+                            <span>Styles</span>
+                        </a>
+                        <ul className="sub-menu" >
+                            <li><Link to={'/v1/product/style/add'}>Add</Link></li>
+                            <li><Link to={'/v1/product/style/list'}>List</Link></li>
+                        </ul>
+                    </li>
+                    <li className="menu-title">Orders</li>
+                    <li>
+                        <a href="/" className="has-arrow waves-effect">
+                            <i className="uil-store"></i>
+                            <span>Orders</span>
+                        </a>
+                        <ul className="sub-menu" >
+                            <li><Link to={'/v1/order/pending'}>Pending</Link></li>
+                            <li><Link to={'/v1/order/processing'}>Processing</Link></li>
+                            <li><Link to={'/v1/order/delivering'}>Delivering</Link></li>
+                            <li><Link to={'/v1/order/complete'}>Complete</Link></li>
+                        </ul>
+                    </li>
+                    <li className="menu-title">Extras</li>
+                    <li>
+                        <Link to={'/v1/extra/wallet'}>
+                            <i className="uil-home-alt"></i>
+                            <span>Wallet</span>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to={'/v1/extra/account'}>
+                            <i className="uil-home-alt"></i>
+                            <span>Account</span>
+                        </Link>
+                    </li>
+
+                    <li>
+                        <Link to={'/v1/extra/report'}>
+                            <i className="uil-home-alt"></i>
+                            <span>Report</span>
+                        </Link>
+                    </li>
+                    <li className="menu-title">Client Page</li>
+                    <li>
+                        <Link to={'/v1/extra/review'}>
+                            <i className="uil-home-alt"></i>
+                            <span>Review</span>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to={'/v1/extra/homepage'}>
+                            <i className="uil-home-alt"></i>
+                            <span>Homepage</span>
+                        </Link>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+
+    )
+}
+export default Sidebar;

@@ -1,0 +1,21 @@
+[
+    {
+        "id": 1,
+        "referenceId": "3erf543fgksklodioe5op",
+        "guestId": "354623", 
+        "surname": "Asante",
+        "otherName": "Emmanuel",
+        "email": "asante@gmail.com", 
+        "contact": "0247049416"
+        
+    },
+    {
+        "id": 2,
+        "referenceId": "56sffg8s6g5s3ga3f3g3a",
+        "guestId": "653213", 
+        "surname": "Appiah",
+        "otherName": "Evans",
+        "email": "evans@gmail.com", 
+        "contact": "0243226177"
+    }
+]

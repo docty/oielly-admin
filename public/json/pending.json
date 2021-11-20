@@ -1,0 +1,12 @@
+[
+    {
+        "id": 1,
+        "referenceId": "WER5678", 
+        "productId": "43FS1", 
+        "quantity": 2, 
+        "amount": 50, 
+        "guestName": "Henry Asiedu", 
+        "contact": "0247049416", 
+        "dateCreate": "12/08/2021" 
+    }
+]

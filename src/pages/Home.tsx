@@ -1,4 +1,4 @@
-import { Avatar, Card, Cage, Flexbox, Breadcrumb, Heading, Grid } from '@docty68/widget';
+import { Avatar, Card, Cage, Flexbox, Breadcrumb, Heading, Grid } from '@synevix/react-widget';
 import * as css from '../utility/styling';
 
 

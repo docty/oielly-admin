@@ -1,7 +1,7 @@
 import {
     Paragraph, Cage, Card, Column, Flexbox, Heading, TableHeader, TableItem,
     TableRow, TextField, Table, Option, Breadcrumb, Button, Grid
-} from '@docty68/widget';
+} from '@synevix/react-widget';
 import { useEffect, useState, Children } from 'react';
 import Spinner from '../../components/Spinner';
 

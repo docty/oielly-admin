@@ -1,9 +1,9 @@
-import { Cage, Card, Flexbox, Heading, TextField, Button, Icon, Breadcrumb, Grid, Form } from '@docty68/widget';
+import { Cage, Card, Flexbox, Heading, TextField, Button, Icon, Breadcrumb, Grid, Form } from '@synevix/react-widget';
 import { useRef, useState } from 'react';
 import { Link, useHistory, } from 'react-router-dom'
 import * as css from '../../utility/styling';
 import { IMarketMaterial, IResponse } from '../../interface';
-import oielly from '@docty68/oielly-gateway';
+import oielly from '@synevix/oielly-gateway';
 import { Toast } from '../../components/Toast';
 
 const Market_Add = () => {

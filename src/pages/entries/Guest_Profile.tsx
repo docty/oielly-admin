@@ -15,9 +15,9 @@ import {
   TableItem,
   TableRow,
   Grid,
-} from "@docty68/widget";
+} from "@synevix/react-widget";
 import { Link, useParams, useHistory } from "react-router-dom";
-import oielly from "@docty68/oielly-gateway";
+import oielly from "@synevix/oielly-gateway";
 import classnames from "classnames";
 
 import { IGuest } from "../../interface";

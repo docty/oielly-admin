@@ -1,5 +1,5 @@
-import oielly from '@docty68/oielly-gateway';
-import { Cage, Card, Column, Flexbox, Heading, TableHeader, TableItem, TableRow, Table, Breadcrumb, Button, SearchField} from '@docty68/widget';
+import oielly from '@synevix/oielly-gateway';
+import { Cage, Card, Column, Flexbox, Heading, TableHeader, TableItem, TableRow, Table, Breadcrumb, Button, SearchField} from '@synevix/react-widget';
 import { Children, useEffect, useState } from 'react';
 import Spinner from '../../components/Spinner'; 
 import * as css from '../../utility/styling';
@@ -52,7 +52,7 @@ const Content = () => {
                         <SearchField
                             placeholder={"Search"}
                             style={{ marginBottom: '0' }}
-                            onValueChange={(e) => console.log(e)}
+                            onValueChange={(e:any) => console.log(e)}
                         />
                     </Column>
                      

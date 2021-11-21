@@ -1,4 +1,4 @@
-import { Card, Flexbox, Heading, Button, TextField } from "@docty68/widget";
+import { Card, Flexbox, Heading, Button, TextField } from "@synevix/react-widget";
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { style } from "typestyle";

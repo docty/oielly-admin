@@ -14,10 +14,10 @@ import {
   Spinner,
   Pagination,
   SearchField,
-} from "@docty68/widget";
+} from "@synevix/react-widget";
 import { useEffect, useState } from "react";
 import classnames from "classnames";
-import oielly from "@docty68/oielly-gateway";
+import oielly from "@synevix/oielly-gateway";
 import { Link } from "react-router-dom";
 
 import { IClient } from "../../interface";
@@ -87,7 +87,7 @@ const Content = () => {
               placeholder={"Search"}
               style={{ marginBottom: "0" }}
               
-              onValueChange={(e) => console.log(e)}
+              onValueChange={(e:any) => console.log(e)}
             />
           </Column>
         </Flexbox>

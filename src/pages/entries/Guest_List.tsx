@@ -14,11 +14,11 @@ import {
   TableItem,
   TableRow,
   SearchField,
-} from "@docty68/widget";
+} from "@synevix/react-widget";
 import { useEffect, useState } from "react";
 import classnames from "classnames";
 import { Link } from "react-router-dom";
-import oielly from "@docty68/oielly-gateway";
+import oielly from "@synevix/oielly-gateway";
 import * as css from "../../utility/styling";
 
 import { IGuest } from "../../interface";
@@ -78,7 +78,7 @@ const Content = () => {
             <SearchField
               placeholder={"Search"}
               style={{ marginBottom: "0" }}
-              onValueChange={(e) => console.log(e)}
+              onValueChange={(e:any) => console.log(e)}
             />
           </Column>
         </Flexbox>

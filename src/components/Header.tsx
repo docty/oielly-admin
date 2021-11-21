@@ -1,5 +1,5 @@
 import logo from '../assets/images/logo-light.png';
-import { Card, Paragraph, Icon, Avatar, Button, Image, Cage, Flexbox, Grid, } from '@docty68/widget';
+import { Card, Paragraph, Icon, Avatar, Button, Image, Cage, Flexbox, Grid, } from '@synevix/react-widget';
 import { Link } from 'react-router-dom';
 import { style } from 'typestyle';
 import * as css from '../utility/styling'

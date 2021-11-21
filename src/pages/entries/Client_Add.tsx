@@ -1,7 +1,7 @@
-import { Cage, Flexbox, Heading, TextField, Option, Button, Breadcrumb, Card, Icon, Grid, Form } from '@docty68/widget';
+import { Cage, Flexbox, Heading, TextField, Option, Button, Breadcrumb, Card, Icon, Grid, Form } from '@synevix/react-widget';
 import { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import oielly from "@docty68/oielly-gateway";
+import oielly from "@synevix/oielly-gateway";
 import { IClient, IResponse } from '../../interface';
 import * as css from '../../utility/styling';
 import { Toast } from '../../components/Toast';

@@ -14,8 +14,8 @@ import {
   Breadcrumb,
   TabItem,
   Grid
-} from "@docty68/widget";
-import oielly from "@docty68/oielly-gateway";
+} from "@synevix/react-widget";
+import oielly from "@synevix/oielly-gateway";
 import classnames from "classnames";
 import { Link, useParams, useHistory } from 'react-router-dom';
 

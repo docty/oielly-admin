@@ -13,9 +13,9 @@ import {
     Paragraph, 
     Spinner,
     SearchField
-} from "@docty68/widget";
+} from "@synevix/react-widget";
 import classnames from "classnames";
-import oielly from "@docty68/oielly-gateway";
+import oielly from "@synevix/oielly-gateway";
 
 import { IMarketMaterial } from "../../interface";
 import { Link, useHistory } from "react-router-dom";
@@ -83,7 +83,7 @@ const Content = () => {
                         <SearchField
                             placeholder={"Search"}
                             style={{ marginBottom: "0" }}
-                            onValueChange={(e) => console.log(e)}
+                            onValueChange={(e:any) => console.log(e)}
                         />
                     </Column>
                 </Flexbox>

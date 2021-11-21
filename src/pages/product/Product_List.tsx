@@ -1,6 +1,6 @@
-import { Image, Breadcrumb, Button, Cage, Card, Column, Flexbox, Heading, Icon, Paragraph, Grid, SearchField } from '@docty68/widget';
+import { Image, Breadcrumb, Button, Cage, Card, Column, Flexbox, Heading, Icon, Paragraph, Grid, SearchField } from '@synevix/react-widget';
 import { useState, useEffect } from "react";
-import oielly from "@docty68/oielly-gateway";
+import oielly from "@synevix/oielly-gateway";
 import Spinner from "../../components/Spinner";
 import { Link, useHistory } from 'react-router-dom';
 import * as css from '../../utility/styling';
@@ -60,7 +60,7 @@ const Content = () => {
                         <SearchField
                             placeholder={"Search"}
                             style={{ marginBottom: '0' }}
-                            onValueChange={(e) => console.log(e)}
+                            onValueChange={(e:any) => console.log(e)}
                         />
 
                     </Column>

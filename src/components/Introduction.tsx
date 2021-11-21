@@ -1,4 +1,4 @@
-import { Card, Flexbox, Button, Heading, Cage } from "@docty68/widget";
+import { Card, Flexbox, Button, Heading, Cage } from "@synevix/react-widget";
 
 import { IIntroduction } from "../interface";
 import { style } from 'typestyle';

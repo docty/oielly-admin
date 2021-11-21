@@ -11,8 +11,8 @@ import {
   Paragraph,
   Grid,
   Pagination,
-} from "@docty68/widget";
-import oielly from "@docty68/oielly-gateway";
+} from "@synevix/react-widget";
+import oielly from "@synevix/oielly-gateway";
 import { useEffect, useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import classnames from "classnames";

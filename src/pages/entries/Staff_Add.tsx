@@ -1,5 +1,5 @@
-import { Cage, Card, Flexbox, Heading, Option, TextField, Button, Icon, Grid, Breadcrumb, Form } from '@docty68/widget';
-import oielly from "@docty68/oielly-gateway";
+import { Cage, Card, Flexbox, Heading, Option, TextField, Button, Icon, Grid, Breadcrumb, Form } from '@synevix/react-widget';
+import oielly from "@synevix/oielly-gateway";
 import { useRef, useState } from 'react';
 import { Link, useHistory, } from 'react-router-dom'
 import * as css from '../../utility/styling';

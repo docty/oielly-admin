@@ -1,9 +1,9 @@
 import { useState, useCallback, useRef } from 'react';
-import oielly from '@docty68/oielly-gateway';
+import oielly from '@synevix/oielly-gateway';
 import ProductUpload from "../../components/ProductUpload";
 import { IProductAdd, IResponse } from '../../interface';
 import { Link, useHistory } from 'react-router-dom';
-import { TextArea, Breadcrumb, Button, Card, Cage, Flexbox, Heading, Icon, TextField, Option, Grid } from '@docty68/widget';
+import { TextArea, Breadcrumb, Button, Card, Cage, Flexbox, Heading, Icon, TextField, Option, Grid } from '@synevix/react-widget';
 import * as css from '../../utility/styling';
 import { Chain } from '../../components/Chain';
 import { Toast } from '../../components/Toast';

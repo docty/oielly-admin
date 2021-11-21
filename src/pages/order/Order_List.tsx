@@ -15,8 +15,8 @@ import {
     Spinner,
     Grid,
     SearchField
-} from "@docty68/widget";
-import oielly from "@docty68/oielly-gateway";
+} from "@synevix/react-widget";
+import oielly from "@synevix/oielly-gateway";
 import classnames from "classnames";
 import { IOrder } from "../../interface";
 import * as css from "../../utility/styling";
@@ -79,7 +79,7 @@ const Content = () => {
                         <SearchField
                             placeholder={"Search"}
                             style={{ marginBottom: "0" }}
-                            onValueChange={(e) => console.log(e)}
+                            onValueChange={(e:any) => console.log(e)}
                         />
                     </Column>
                     <Column   >

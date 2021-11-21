@@ -19,8 +19,8 @@ import {
     Button,
     Icon,
     Spinner
-} from "@docty68/widget";
-import oielly from "@docty68/oielly-gateway";
+} from "@synevix/react-widget";
+import oielly from "@synevix/oielly-gateway";
 import { IOrderSummary, IPayment, IResponse } from "../../interface";
 import * as css from "../../utility/styling";
 import Modal from "../../components/Modal";

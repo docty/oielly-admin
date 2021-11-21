@@ -14,9 +14,9 @@ import {
 	TabItem,
 	TextField,
 	Grid,
-} from "@docty68/widget";
+} from "@synevix/react-widget";
 import { Link, useHistory, useParams } from "react-router-dom";
-import oielly from "@docty68/oielly-gateway";
+import oielly from "@synevix/oielly-gateway";
 import classnames from "classnames";
 
 import * as css from "../../utility/styling";

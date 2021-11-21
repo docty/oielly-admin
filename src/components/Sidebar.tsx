@@ -1,4 +1,4 @@
-import { Button,  Cage, MenuSub } from "@docty68/widget";
+import { Button,  Cage, MenuSub } from "@synevix/react-widget";
 import { Menu, MenuItem } from './Menu'
 import { style } from 'typestyle';
 import {  useRef } from 'react';

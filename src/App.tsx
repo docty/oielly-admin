@@ -6,7 +6,7 @@ import Login from './pages/Login';
 // import './assets/libs/sweetalert2/sweetalert2.min.css';
 // import './assets/libs/select2/css/select2.min.css';
 
-import '@synevix/widget/dist/esm/widget.css'     
+import '@synevix/react-widget/dist/esm/widget.css'     
 import './assets/css/styles.css';
 
 import { Redirect,  BrowserRouter, Switch, Route } from 'react-router-dom'; 

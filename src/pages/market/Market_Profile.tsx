@@ -15,9 +15,7 @@ import oielly from "@synevix/oielly-gateway";
 import classnames from "classnames";
 import { Link, useParams, useHistory } from "react-router-dom";
 
-import { IMarketMaterial } from "../../interface";
-
-import imag from "../../assets/images/users/avatar-1.jpg";
+import { IMarketMaterial } from "../../interface"; 
 import * as css from "../../utility/styling";
 
 const Market_Profile = () => {
@@ -99,7 +97,7 @@ const LeftPane = (props: IMarketMaterial) => {
     <Card className={css.cardStyling}>
       <Cage>
         <Image
-          source={imag}
+          source={'https://res.cloudinary.com/dfsd5t9zt/image/upload/v1638576804/profile_images/noimage_dgiews.jpg'}
           alt={""}
           className={classnames(["m-auto", "w-1/2"])}
           style={{ borderRadius: "50%" }}

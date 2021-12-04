@@ -150,7 +150,7 @@ export interface IProductMaterial {
     category: string;
     tag: string;
     description: string;
-    imageUrl: Array<{id: number; url: string}>
+    imageUrl: Array<string>
 }
 
 export interface IProductAdd {

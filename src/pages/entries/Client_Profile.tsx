@@ -22,8 +22,7 @@ import classnames from "classnames";
 import * as css from "../../utility/styling";
 import { IClient, IResponse } from "../../interface";
 import { CLIENT_UPLOAD } from "../../utility/constant";
-import ImageUpload from "../../components/ImageUpload";
-import imag from "../../assets/images/users/avatar-1.jpg";
+import ImageUpload from "../../components/ImageUpload"; 
 import { Toast } from "../../components/Toast";
 
 const Client_Profile = () => {
@@ -103,7 +102,7 @@ const LeftPane = (props: IClient) => {
 		<Card className={css.cardStyling}>
 			<Cage>
 				<Image
-					source={imag}
+					source={props.imageUrl}
 					alt={""}
 					className={classnames(["m-auto", "w-1/2"])}
 					style={{ borderRadius: "50%" }}
@@ -148,11 +147,11 @@ const RightPane = (props: IClient) => {
 			<Heading className={css.profileCardTitle} type={"H3"} text={"Account"} />
 			<Grid md={"2"} style={{ gridAutoRows: "40px" }}>
 				<Paragraph text={"Bank Name :"} className={"font-bold"} />
-				<Paragraph text={"Access Bank"} />
+				<Paragraph text={props.bankName} />
 				<Paragraph text={"Account Number :"} className={"font-bold"} />
-				<Paragraph text={"0065321065498646"} />
+				<Paragraph text={props.accountNumber} />
 				<Paragraph text={"Branch:"} className={"font-bold"} />
-				<Paragraph text={"Adum"} />
+				<Paragraph text={props.bankBranch} />
 			</Grid>
 		</Card>
 	);
@@ -260,7 +259,7 @@ const Account = (props: IClient) => {
 
 	const updateAccount = () => {
 		setLoading(true);
-
+		console.log(state)
 		oielly.client.update({
 			referenceId: state.referenceId,
 			data: { ...state },

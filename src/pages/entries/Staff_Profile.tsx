@@ -21,8 +21,7 @@ import { Link, useParams, useHistory } from 'react-router-dom';
 
 import { IResponse, IStaff } from "../../interface";
 import { STAFF_UPLOAD } from "../../utility/constant";
-import ImageUpload from "../../components/ImageUpload";
-import imag from "../../assets/images/users/avatar-1.jpg";
+import ImageUpload from "../../components/ImageUpload"; 
 import * as css from "../../utility/styling";
 import { Toast } from "../../components/Toast";
 
@@ -97,7 +96,7 @@ const LeftPane = (props: IStaff) => {
     <Card className={css.cardStyling}>
       <Cage>
         <Image
-          source={imag}
+          source={props.imageUrl}
           alt={""}
           className={classnames(["m-auto", "w-1/2"])}
           style={{ borderRadius: "50%" }}

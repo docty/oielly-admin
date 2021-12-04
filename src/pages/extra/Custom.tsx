@@ -1,4 +1,4 @@
-import oielly from '@synevix/oielly-gateway';
+//import oielly from '@synevix/oielly-gateway';
 import { Cage, Card, Column, Flexbox, Heading, TableHeader, TableItem, TableRow, Table, Breadcrumb, Button, SearchField } from '@synevix/react-widget';
 import { Children, useEffect, useState } from 'react';
 import Spinner from '../../components/Spinner';
@@ -26,21 +26,22 @@ const Custom = () => (
 
 
 const Content = () => {
-    const [loading, setLoading] = useState<boolean>(true);
-    const [Custom, setCustom] = useState<any[]>([]);
+    const [loading, ] = useState<boolean>(true);
+    const [Custom, ] = useState<any[]>([]);
 
 
     useEffect(() => {
-        oielly.selection.list({
-            response: (success: any, error: any) => {
-                if (error) {
-                    console.log(error);
-                    return;
-                }
-                setCustom(success);
-                setLoading(false);
-            },
-        });
+        // oielly.selection.list({
+        //     status: 'some',
+        //     response: (success: any, error: any) => {
+        //         if (error) {
+        //             console.log(error);
+        //             return;
+        //         }
+        //         setCustom(success);
+        //         setLoading(false);
+        //     },
+        // });
     }, [])
 
 
@@ -52,7 +53,7 @@ const Content = () => {
                         <SearchField
                             placeholder={"Search"}
                             style={{ marginBottom: '0' }}
-                            onValueChange={(e:any) => console.log(e)}
+                            onValueChange={(e: any) => console.log(e)}
                         />
                     </Column>
 

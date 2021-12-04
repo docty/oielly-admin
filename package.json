@@ -4,7 +4,7 @@
   "private": true,
   "author": "Synevix <synevix@gmail.com>",
   "dependencies": {
-    "@synevix/oielly-gateway": "^1.0.0",
+    "@synevix/oielly-gateway": "^1.1.0",
     "@synevix/react-widget": "^1.1.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",

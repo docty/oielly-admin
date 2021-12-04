@@ -1,3 +1,4 @@
+import oielly from "@synevix/oielly-gateway";
 import { Card, Flexbox, Heading, Button, TextField } from "@synevix/react-widget";
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
@@ -5,14 +6,27 @@ import { style } from "typestyle";
 import { ILogin } from "../interface";
 
 const Login = () => {
-  const [state, setState] = useState<ILogin>({} as ILogin);
-  //const [error,] = useState<ILogin>({} as ILogin);
+  const [state, setState] = useState<ILogin>({ email: 'adwoa@test.com', password: 'A0DD69' });
+
   const history = useHistory();
 
   const onLoginSubmit = () => {
-    console.log(state);
-    history.push("/v1/dashboard");
-    //TODO: database.store(state);
+
+    oielly.staff.login({
+      data: state,
+      response: (success: any, error: any) => {
+        if (error) { console.error(error); return }
+
+        if (success.message) {
+          window.sessionStorage.setItem('auth-token', success.token)
+          window.sessionStorage.setItem('referenceId', success.referenceId)
+          history.push("/v1/dashboard");
+        }
+
+      }
+    })
+
+    //TODO: database.store(state); 0244505550 // 0596052896 // 0553782212 // 0550634923 (Accra) // 0560594161 (Accra WhatsApp) 
   };
 
   return (
@@ -42,7 +56,7 @@ const Login = () => {
         <Button
           text={"Login"}
           className={'w-full text-white p-2 font-bold my-4'}
-          bgColor={"pink"} 
+          bgColor={"pink"}
           onClick={() => onLoginSubmit()}
         />
 

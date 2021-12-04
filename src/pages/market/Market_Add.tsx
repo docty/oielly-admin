@@ -57,8 +57,9 @@ const Content = () => {
                     setResponse({ text: error.toString(), color: 'red', icon: 'icon-info3' })
                     return
                 }
-                setResponse({ text: success.toString(), color: 'green', icon: 'icon-info3' });
+                setResponse({ text: success.message.toString(), color: 'green', icon: 'icon-info3' });
                 setState({} as IMarketMaterial)
+                setClientName('');
             }
         })
     }

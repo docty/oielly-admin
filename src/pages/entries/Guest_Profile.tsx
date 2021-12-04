@@ -1,5 +1,4 @@
-import { useEffect, useState } from "react";
-import avatar from "../../assets/images/users/avatar-4.jpg";
+import { useEffect, useState } from "react"; 
 import {
   Image,
   Card,
@@ -93,7 +92,7 @@ const LeftPane = (props: IGuest) => {
     <Card className={css.cardStyling}>
       
         <Image
-          source={avatar}
+          source={'https://res.cloudinary.com/dfsd5t9zt/image/upload/v1638576804/profile_images/noimage_dgiews.jpg'}
           alt={""}
           className={classnames(['w-1/2 m-auto'])}
           style={{ borderRadius: "50%" }}

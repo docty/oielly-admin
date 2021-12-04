@@ -4,7 +4,6 @@ import oielly from "@synevix/oielly-gateway";
 import Spinner from "../../components/Spinner";
 import { Link, useHistory } from 'react-router-dom';
 import * as css from '../../utility/styling';
-import imag from '../../assets/images/users/avatar-1.jpg';
 import classnames from 'classnames'
 import { IProductMaterial } from '../../interface';
 
@@ -69,9 +68,9 @@ const Content = () => {
                 <Grid md={'3'} gap={'3'}>
                     {
                         state.map((item, index: number) => (
-                            <Card key={index} style={{ margin: '0.5rem' }} className={css.cardStyling} >
+                            <Card key={index} style={{ margin: '0.5rem'}} className={css.cardStyling} >
                                 <Link to={`/v1/product/material/${item.referenceId}/profile`}>
-                                    <Image source={imag} alt={''} className={classnames(['m-auto'])} style={{ width: '100%' }} />
+                                    <Image source={item.imageUrl[0]} alt={''} className={classnames(['m-auto'])} style={{ width: '100%', height: '400px' }} />
                                     <Heading type={'H5'} text={item.materialName} className={'mt-5 text-center font-bold'} />
                                     <Paragraph text={item.productId} className={'text-center'} />
                                     <Paragraph text={'GHC ' + item.price} className={'text-center'} style={{ wordWrap: 'break-word' }} />

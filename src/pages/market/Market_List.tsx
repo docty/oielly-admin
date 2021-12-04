@@ -19,8 +19,7 @@ import oielly from "@synevix/oielly-gateway";
 
 import { IMarketMaterial } from "../../interface";
 import { Link, useHistory } from "react-router-dom";
-import * as css from "../../utility/styling";
-import imag from "../../assets/images/users/avatar-1.jpg";
+import * as css from "../../utility/styling"; 
 
 const Market_List = () => {
     const history = useHistory();
@@ -92,7 +91,7 @@ const Content = () => {
                         <Card key={index} className={css.cardStyling}>
                             <Link to={`/v1/market/material/${item.referenceId}/profile`}>
                                 <Image
-                                    source={imag}
+                                    source={'https://res.cloudinary.com/dfsd5t9zt/image/upload/v1638576804/profile_images/noimage_dgiews.jpg'}
                                     alt={""}
                                     className={classnames(["m-auto", "w-1/2"])}
                                     style={{ borderRadius: "50%" }}

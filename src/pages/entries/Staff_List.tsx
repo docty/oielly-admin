@@ -18,8 +18,7 @@ import { Link, useHistory } from "react-router-dom";
 import classnames from "classnames";
 
 import { IStaff } from "../../interface";
-import * as css from "../../utility/styling";
-import imag from "../../assets/images/users/avatar-1.jpg";
+import * as css from "../../utility/styling"; 
 
 const Staff_List = () => {
   const history = useHistory()
@@ -82,11 +81,12 @@ const Content = () => {
           <Card key={index} className={css.cardStyling}>
             <Link to={`/v1/entries/staff/${item.referenceId}/profile`}>
               <Image
-                source={imag}
+                source={item.imageUrl}
                 alt={""}
                 className={classnames(["m-auto", "w-1/2"])}
                 style={{ borderRadius: "50%" }}
               />
+              
               <Heading
                 type={"H5"}
                 text={`${item.surname} ${item.otherName}`}

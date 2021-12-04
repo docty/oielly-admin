@@ -15,9 +15,7 @@ import oielly from "@synevix/oielly-gateway";
 import classnames from "classnames";
 import { Link, useParams, useHistory } from "react-router-dom";
 
-import { IProductMaterial } from "../../interface";
-
-import imag from "../../assets/images/users/avatar-1.jpg";
+import { IProductMaterial } from "../../interface"; 
 import * as css from "../../utility/styling";
 
 const Product_Profile = () => {
@@ -99,7 +97,7 @@ const LeftPane = (props: IProductMaterial) => {
     <Card className={css.cardStyling}>
       <Cage>
         <Image
-          source={imag}
+          source={'https://res.cloudinary.com/dfsd5t9zt/image/upload/v1638576804/profile_images/noimage_dgiews.jpg'}
           alt={""}
           className={classnames(["m-auto", "w-1/2"])}
           style={{ borderRadius: "50%" }}
@@ -158,11 +156,12 @@ const RightPane = (props: IProductMaterial) => {
 
 const Gallery = (props: IProductMaterial) => {
   return (
-    <Grid md={'3'} gap={'3'} style={{ gridAutoRows: '80px' }}>
+    <Grid md={'3'} gap={'3'} style={{ gridAutoRows: '400px' }}>
       {
+        
         props.imageUrl && Children.toArray(props.imageUrl.map(item => (
           <Card className={css.cardStyling}>
-            <Image source={item.url} alt={'Items'} />
+            <Image source={item} alt={'Items'} style={{height: '100%', width: '100%'}} />
           </Card>
         )))
       }

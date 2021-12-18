@@ -6,7 +6,7 @@ import { style } from "typestyle";
 import { ILogin } from "../interface";
 
 const Login = () => {
-  const [state, setState] = useState<ILogin>({ email: 'adwoa@test.com', password: 'A0DD69' });
+  const [state, setState] = useState<ILogin>({ email: 'staff@test.com', password: '7FE795' });
 
   const history = useHistory();
 

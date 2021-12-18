@@ -29,3 +29,15 @@ Can create a market from client page
 Client Id should be  an edit box with typed sugguestions
 Add number of product and wallet balance
 Profile, Edit, Delete are not working 
+
+######### SUBSCRIBE ########
+There should be a notification that subscribe has been submitted
+Server should not permit multiple subscription
+Clear subscribe button after submitting
+
+######### REVIEW ########
+Display all review
+There should be a notification that subscribe has been submitted
+Server should not permit multiple subscription
+Clear subscribe button after submitting
+Should be able to reply review messages

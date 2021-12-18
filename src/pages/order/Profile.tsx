@@ -242,7 +242,7 @@ const Content = () => {
                                 <Paragraph text={"house number"} className={"py-2"} />
                                 <Paragraph text={state.houseNumber} className={"py-2"} />
                                 <Paragraph text={"GPS"} className={"py-2"} />
-                                <Paragraph text={state.gps} className={"py-2"} />
+                                <Paragraph text={state.gpsAddress} className={"py-2"} />
                             </Cage>
                         </Cage>
                     </Column>

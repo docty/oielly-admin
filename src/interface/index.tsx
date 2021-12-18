@@ -188,7 +188,7 @@ export interface IOrderSummary {
     guestId: string;
     status: string;
     city: string;
-    gps: string;
+    gpsAddress: string;
     houseNumber: string;
 }
 

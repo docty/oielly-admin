@@ -9,8 +9,7 @@ import {
   Icon,
   Breadcrumb,
   Paragraph,
-  Table,
-  TableHeader,
+  Table, 
   TableItem,
   TableRow,
   Grid,
@@ -149,13 +148,13 @@ const RightPane = (props: IGuest) => {
 const Order = (props: IGuest) => {
   const tableHeader = ["OrderID", "Amount", "Date"];
   return (
-    <Table >
-          <TableRow>
+    <Table header={tableHeader}>
+          {/* <TableRow>
             <TableHeader>SN</TableHeader>
             {tableHeader.map((item: string) => (
               <TableHeader>{item}</TableHeader>
             ))}
-          </TableRow>
+          </TableRow> */}
           {props.Orders && props.Orders.map((item, index: number) => (
             <TableRow key={index}>
               <TableItem>{index + 1}</TableItem>

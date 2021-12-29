@@ -9,8 +9,7 @@ import {
   Column,
   Flexbox,
   Heading,
-  Table,
-  TableHeader,
+  Table, 
   TableItem,
   TableRow,
   SearchField,
@@ -56,7 +55,7 @@ const Guest_List = () => (
 const Content = () => {
   const [loading, setLoading] = useState<boolean>(true);
   const [state, setState] = useState<IGuest[]>([]);
-  const tableHeader = ["Guest ID", "Surname", "Other Name", "Email", "Contact"];
+  const tableHeader = ["SN", "Guest ID", "Surname", "Other Name", "Email", "Contact", "Action"];
 
   useEffect(() => {
     oielly.guest.list({
@@ -82,14 +81,14 @@ const Content = () => {
             />
           </Column>
         </Flexbox>
-        <Table>
-          <TableRow>
+        <Table header={tableHeader}>
+          {/* <TableRow>
             <TableHeader>SN</TableHeader>
             {tableHeader.map((item: string) => (
               <TableHeader>{item}</TableHeader>
             ))}
             <TableHeader>Action</TableHeader>
-          </TableRow>
+          </TableRow> */}
           {state.map((item, index: number) => (
             <TableRow key={index}>
               <TableItem>{index + 1}</TableItem>

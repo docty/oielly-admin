@@ -54,22 +54,30 @@ const Pending = () => (
 
 const Content = () => {
     const [loading, setLoading] = useState<boolean>(true);
+    const divider = 10;
+    const [dataSize, setDataSize] = useState<{ min: number, max: number }>({ min: 1, max: divider });
     const [state, setState] = useState<IOrder[]>([]);
     const [status, setStatus] = useState<string>("pending");
 
     useEffect(() => {
         oielly.order.list({
             status: status,
+            range: {min:dataSize.min, max:dataSize.max}, 
             response: (success: any, error: any) => {
                 if (error) {
                     console.log(error);
                     return;
                 }
-                setState(success);
+                setState(success); 
                 setLoading(false);
             },
         });
-    }, [status]);
+    }, [dataSize.max, dataSize.min, status]);
+
+    const paginationAction = (value: number) => {
+        setDataSize({ ...dataSize, min: value - divider + 1, max: value })
+        console.log((value - 10 + 1), '----', value)
+    }
 
     return (
         <Cage className={css.contentStyling}>
@@ -79,7 +87,7 @@ const Content = () => {
                         <SearchField
                             placeholder={"Search"}
                             style={{ marginBottom: "0" }}
-                            onValueChange={(e:any) => console.log(e)}
+                            onValueChange={(e: any) => console.log(e)}
                         />
                     </Column>
                     <Column   >
@@ -121,7 +129,9 @@ const Content = () => {
 
                 {loading && <Spinner type={'circle'} />}
                 <Cage className={"pt-5"}>
-                    <Pagination length={50} url={"/v1/entries/guest"} align={"center"} />
+                    
+                    <Pagination length={state.length} url={"/v1/order/list"} align={"center"} actionHandler={paginationAction} divider={divider} />
+
                 </Cage>
             </Card>
         </Cage>

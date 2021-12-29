@@ -1,7 +1,7 @@
 import oielly from '@synevix/oielly-gateway';
-import { Cage, Card, Column, Flexbox, Heading, TableHeader, TableItem, TableRow, Table, Breadcrumb, Button, SearchField} from '@synevix/react-widget';
+import { Cage, Card, Column, Flexbox, Heading, TableItem, TableRow, Table, Breadcrumb, Button, SearchField } from '@synevix/react-widget';
 import { Children, useEffect, useState } from 'react';
-import Spinner from '../../components/Spinner'; 
+import Spinner from '../../components/Spinner';
 import * as css from '../../utility/styling';
 
 const Contact = () => (
@@ -28,7 +28,7 @@ const Contact = () => (
 const Content = () => {
     const [loading, setLoading] = useState<boolean>(true);
     const [contact, setContact] = useState<any[]>([]);
-
+    const tableHeader = ["SN", "Name", "Email", "Message", "Action"];
 
     useEffect(() => {
         oielly.contact.list({
@@ -52,35 +52,24 @@ const Content = () => {
                         <SearchField
                             placeholder={"Search"}
                             style={{ marginBottom: '0' }}
-                            onValueChange={(e:any) => console.log(e)}
+                            onValueChange={(e: any) => console.log(e)}
                         />
                     </Column>
-                     
+
                 </Flexbox>
 
-                <Table>
-                    <thead>
-                        <TableRow>
+                <Table header={tableHeader}>
+                    {
+                        Children.toArray(contact.map(((item, index: number) => (
+                            <TableRow>
+                                <TableItem>{index + 1}</TableItem>
+                                <TableItem>{item.name}</TableItem>
+                                <TableItem>{item.email}</TableItem>
+                                <TableItem>{item.message}</TableItem>
+                            </TableRow>
+                        ))))
+                    }
 
-                            <TableHeader>SN</TableHeader>
-                            <TableHeader>Name</TableHeader>
-                            <TableHeader>Email</TableHeader>
-                            <TableHeader>Message</TableHeader>
-                        </TableRow>
-                    </thead>
-                    <tbody>
-                        {
-                            Children.toArray(contact.map(((item, index:number) => (
-                                <TableRow>
-                                    <TableItem>{index+1}</TableItem> 
-                                    <TableItem>{item.name}</TableItem>
-                                    <TableItem>{item.email}</TableItem>
-                                    <TableItem>{item.message}</TableItem>
-                                </TableRow>
-                            ))))
-                        }
-
-                    </tbody>
                 </Table>
                 {loading && (<Spinner />)}
 

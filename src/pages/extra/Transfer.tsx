@@ -1,5 +1,5 @@
 import {
-    Paragraph, Cage, Card, Column, Flexbox, Heading, TableHeader, TableItem,
+    Paragraph, Cage, Card, Column, Flexbox, Heading,  TableItem,
     TableRow, TextField, Table, Option, Breadcrumb, Button, Grid
 } from '@synevix/react-widget';
 import { useEffect, useState, Children } from 'react';
@@ -34,7 +34,7 @@ const Content = () => {
     const [loading, setLoading] = useState<boolean>(true);
     const [state, setState] = useState<any[]>([]);
     const [itemSelect, setItemSelect] = useState<ITransaction>({} as ITransaction);
-
+    const tableHeader = ["SN", "Reference", "Paid", "Guest", "Contact", "Action"];
 
     useEffect(() => {
         fetch('http://127.0.0.1:1337/api/wallet/transfer/')
@@ -65,16 +65,7 @@ const Content = () => {
                 </Flexbox>
                 <Flexbox>
                     <Column lg={'8'}>
-                        <Table>
-                            <TableRow>
-                                <TableHeader>SN</TableHeader>
-                                <TableHeader>Reference</TableHeader>
-                                <TableHeader>Paid</TableHeader>
-                                <TableHeader>Guest</TableHeader>
-                                <TableHeader>Contact</TableHeader>
-                                <TableHeader>Action</TableHeader>
-                            </TableRow>
-
+                        <Table header={tableHeader}>
                             {
                                 Children.toArray(state.map((item:any) => (
                                     <TableRow>
@@ -98,7 +89,7 @@ const Content = () => {
                         <Card className={css.cardStyling}>
                             <Heading type={'H3'} text={'Details'} className={'font-bold text-base'} />
                             <hr />
-                            <Grid md={'2'}>
+                            <Grid md={'2'} gap={'4'}>
                                 <Paragraph text={'Date'} />
                                 <Paragraph text={itemSelect.paidAt} />
                                 <Paragraph text={'Status'} />

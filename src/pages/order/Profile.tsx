@@ -9,8 +9,7 @@ import {
     Card,
     Column,
     TableRow,
-    Table,
-    TableHeader,
+    Table, 
     TableItem,
     Option,
     Avatar,
@@ -74,7 +73,7 @@ const Content = () => {
     const [response, setResponse] = useState<IResponse>({} as IResponse);
     const [loadingVerify, setLoadingVerify] = useState<boolean>(false);
     const [responseVerify, setResponseVerify] = useState<IResponse>({} as IResponse);
-
+    const tableHeader = ["SN", "Product ID", "Price", "Quantity", "Total", "Action"];
 
     useEffect(() => {
         oielly.order.profile({
@@ -133,6 +132,7 @@ const Content = () => {
     };
 
     const paymentVerify = () => {
+        
         setLoadingVerify(true);
         fetch('http://192.168.43.146:1337/api/wallet/transaction/verify/sbfsqiyq9z')
             .then(res => res.json())
@@ -249,19 +249,8 @@ const Content = () => {
                 </Flexbox>
                 <Grid md={'3'} gap={'4'} >
                     <Column className={'col-span-2'}>
-                        <Table>
-                            <thead>
-                                <TableRow>
-                                    <TableHeader>SN</TableHeader>
-                                    <TableHeader>Product ID</TableHeader>
-                                    <TableHeader>Price</TableHeader>
-                                    <TableHeader>Quantity</TableHeader>
-                                    <TableHeader>Total</TableHeader>
-
-                                    <TableHeader>Action</TableHeader>
-                                </TableRow>
-                            </thead>
-                            <tbody>
+                        <Table header={tableHeader}>
+                             
                                 {state.productId &&
                                     Children.toArray(state.productId.map((item, index: number) => (
                                         <TableRow>
@@ -282,7 +271,7 @@ const Content = () => {
                                             </TableItem>
                                         </TableRow>
                                     )))}
-                            </tbody>
+                            
                         </Table>
                     </Column>
                     <Column >

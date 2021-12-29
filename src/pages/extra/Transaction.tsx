@@ -1,5 +1,5 @@
 import {
-    Paragraph, Cage, Card, Column, Flexbox, Heading, TableHeader, TableItem,
+    Paragraph, Cage, Card, Column, Flexbox, Heading,  TableItem,
     TableRow, TextField, Table, Option, Breadcrumb, Button, Grid
 } from '@synevix/react-widget';
 import { useEffect, useState, Children } from 'react';
@@ -34,7 +34,7 @@ const Content = () => {
     const [loading, setLoading] = useState<boolean>(true);
     const [state, setState] = useState<ITransaction[]>([]);
     const [itemSelect, setItemSelect] = useState<ITransaction>({} as ITransaction);
-
+    const tableHeader = ["SN", "Reference", "Paid", "Guest", "Contact", "Action"];
 
     useEffect(() => {
         fetch('http://192.168.43.146:1337/api/wallet/transaction/')
@@ -65,16 +65,7 @@ const Content = () => {
                 </Flexbox>
                 <Flexbox>
                     <Column lg={'8'}>
-                        <Table>
-                            <TableRow>
-                                <TableHeader>SN</TableHeader>
-                                <TableHeader>Reference</TableHeader>
-                                <TableHeader>Paid</TableHeader>
-                                <TableHeader>Guest</TableHeader>
-                                <TableHeader>Contact</TableHeader>
-                                <TableHeader>Action</TableHeader>
-                            </TableRow>
-
+                        <Table header={tableHeader}>
                             {
                                 Children.toArray(state.map((item:any) => (
                                     <TableRow>
@@ -87,7 +78,6 @@ const Content = () => {
                                             <Button icon={'icon-file-text'} onClick={() => setItemSelect(item)}/>
                                         </TableItem>
                                     </TableRow>
-
                                 )))
                             }
 

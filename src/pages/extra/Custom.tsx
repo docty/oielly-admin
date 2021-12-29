@@ -1,5 +1,5 @@
 //import oielly from '@synevix/oielly-gateway';
-import { Cage, Card, Column, Flexbox, Heading, TableHeader, TableItem, TableRow, Table, Breadcrumb, Button, SearchField } from '@synevix/react-widget';
+import { Cage, Card, Column, Flexbox, Heading, TableItem, TableRow, Table, Breadcrumb, Button, SearchField } from '@synevix/react-widget';
 import { Children, useEffect, useState } from 'react';
 import Spinner from '../../components/Spinner';
 import * as css from '../../utility/styling';
@@ -26,9 +26,9 @@ const Custom = () => (
 
 
 const Content = () => {
-    const [loading, ] = useState<boolean>(true);
-    const [Custom, ] = useState<any[]>([]);
-
+    const [loading,] = useState<boolean>(true);
+    const [Custom,] = useState<any[]>([]);
+    const tableHeader = ["SN", "Product ID", "Status", "Action"];
 
     useEffect(() => {
         // oielly.selection.list({
@@ -59,27 +59,18 @@ const Content = () => {
 
                 </Flexbox>
 
-                <Table>
-                    <thead>
-                        <TableRow>
+                <Table header={tableHeader}>
 
-                            <TableHeader>SN</TableHeader>
-                            <TableHeader>Product ID</TableHeader>
-                            <TableHeader>Status</TableHeader>
-                        </TableRow>
-                    </thead>
-                    <tbody>
-                        {
-                            Children.toArray(Custom.map(((item, index: number) => (
-                                <TableRow>
-                                    <TableItem>{index + 1}</TableItem>
-                                    <TableItem>{item.productId}</TableItem>
-                                    <TableItem>{item.status}</TableItem>
-                                </TableRow>
-                            ))))
-                        }
+                    {
+                        Children.toArray(Custom.map(((item, index: number) => (
+                            <TableRow>
+                                <TableItem>{index + 1}</TableItem>
+                                <TableItem>{item.productId}</TableItem>
+                                <TableItem>{item.status}</TableItem>
+                            </TableRow>
+                        ))))
+                    }
 
-                    </tbody>
                 </Table>
                 {loading && (<Spinner />)}
 

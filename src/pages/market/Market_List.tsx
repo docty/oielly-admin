@@ -5,8 +5,7 @@ import {
     Breadcrumb,
     Button,
     Cage,
-    Card,
-    Column,
+    Card, 
     Flexbox,
     Heading,
     Icon,
@@ -77,14 +76,14 @@ const Content = () => {
         <Cage className={css.contentStyling}>
             <Card className={css.cardStyling}>
                 <Flexbox className={"mb-8"}>
-                    <Column lg={"5"} className={"m-auto"}>
+                    <Grid lg={"5"} className={"m-auto"}>
                         
                         <SearchField
                             placeholder={"Search"}
                             style={{ marginBottom: "0" }}
                             onValueChange={(e:any) => console.log(e)}
                         />
-                    </Column>
+                    </Grid>
                 </Flexbox>
                 <Grid lg={"4"} gap={"3"} className={"mb-4"}>
                     {state.map((item, index: number) => (

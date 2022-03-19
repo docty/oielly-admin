@@ -5,7 +5,7 @@
   "author": "Synevix <synevix@gmail.com>",
   "dependencies": {
     "@synevix/oielly-gateway": "^1.1.0",
-    "@synevix/react-widget": "^1.4.0",
+    "@synevix/react-widget": "^1.5.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
@@ -48,6 +48,9 @@
   },
   "devDependencies": {
     "@types/react-dropzone": "^5.1.0",
-    "@types/react-router-dom": "^5.1.8"
+    "@types/react-router-dom": "^5.1.8",
+    "autoprefixer": "^10.4.4",
+    "postcss": "^8.4.12",
+    "tailwindcss": "^3.0.23"
   }
 }

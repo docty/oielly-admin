@@ -1,4 +1,4 @@
-import { Image, Breadcrumb, Button, Cage, Card, Column, Flexbox, Heading, Icon, Paragraph, Grid, SearchField } from '@synevix/react-widget';
+import { Image, Breadcrumb, Button, Cage, Card, Grid, Flexbox, Heading, Icon, Paragraph, SearchField } from '@synevix/react-widget';
 import { useState, useEffect } from "react";
 import oielly from "@synevix/oielly-gateway";
 import Spinner from "../../components/Spinner";
@@ -54,7 +54,7 @@ const Content = () => {
         <Cage className={css.contentStyling}>
             <Card className={css.cardStyling}>
                 <Flexbox className={'mb-8'} justifyContent={'between'}>
-                    <Column >
+                    <Grid >
 
                         <SearchField
                             placeholder={"Search"}
@@ -62,7 +62,7 @@ const Content = () => {
                             onValueChange={(e:any) => console.log(e)}
                         />
 
-                    </Column>
+                    </Grid>
                     <Link  className={'text-white w-1/12 bg-green-500 flex items-center justify-center hover:bg-green-600 rounded'} to={'/v1/product/material/report'} >View Report</Link>
                 </Flexbox>
                 <Grid md={'3'} gap={'3'}>

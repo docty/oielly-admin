@@ -3,8 +3,7 @@ import { Link, useHistory } from "react-router-dom";
 import {
     Avatar,
     Cage,
-    Card,
-    Column,
+    Card, 
     Flexbox,
     Heading,
     Option,
@@ -63,6 +62,10 @@ const Content = () => {
     useEffect(() => {
         oielly.order.list({
             status: status,
+            range: {
+                min: 0,
+                max: 10
+            },
             response: (success: any, error: any) => {
                 if (error) {
                     console.log(error);
@@ -78,20 +81,20 @@ const Content = () => {
         <Cage className={css.contentStyling}>
             <Card className={css.cardStyling}>
                 <Flexbox className={"mb-8"} justifyContent={'between'}>
-                    <Column>
+                    <Cage>
                         <SearchField
                             placeholder={"Search"}
                             style={{ marginBottom: "0" }}
                             onValueChange={(e:any) => console.log(e)}
                         />
-                    </Column>
-                    <Column   >
+                    </Cage>
+                    <Cage   >
                         <Option
                             item={["Popular", "Best of the week"]}
                             value={status}
                             onValueChange={(e: any) => setStatus(e.target.value)}
                         />
-                    </Column>
+                    </Cage>
                 </Flexbox>
                 <Grid lg={'4'} md={'3'} sm={'2'} gap={'3'}>
                     {

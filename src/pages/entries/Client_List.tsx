@@ -3,7 +3,7 @@ import {
   Breadcrumb,
   Cage,
   Card,
-  Column,
+  Grid,
   Flexbox,
   Heading,
   TableItem,
@@ -93,14 +93,14 @@ const Content = () => {
     <Cage className={css.contentStyling}>
       <Card className={css.cardStyling}>
         <Flexbox className={"mb-8"}>
-          <Column lg={"5"} className={"m-auto"}>
+          <Grid lg={"5"} className={"m-auto"}>
             <SearchField
               placeholder={"Search"}
               style={{ marginBottom: "0" }}
 
               onValueChange={(e: any) => console.log(e)}
             />
-          </Column>
+          </Grid>
         </Flexbox>
         
         <Table header={tableHeader}>

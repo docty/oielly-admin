@@ -1,6 +1,6 @@
 import {
-    Paragraph, Cage, Card, Column, Flexbox, Heading,  TableItem,
-    TableRow, TextField, Table, Option, Breadcrumb, Button, Grid
+    Paragraph, Cage, Card, Grid, Flexbox, Heading,  TableItem,
+    TableRow, TextField, Table, Option, Breadcrumb, Button 
 } from '@synevix/react-widget';
 import { useEffect, useState, Children } from 'react';
 import Spinner from '../../components/Spinner';
@@ -48,23 +48,23 @@ const Content = () => {
         <Cage className={css.contentStyling}>
             <Card className={css.cardStyling}>
                 <Flexbox className={'mb-8'}>
-                    <Column lg={'4'} className={'mr-auto'}>
+                    <Grid lg={'4'} className={'mr-auto'}>
                         <TextField
                             type={"text"}
                             placeholder={"Search"}
                             style={{ marginBottom: '0' }}
                             onValueChange={(e) => console.log(e)}
                         />
-                    </Column>
-                    <Column lg={'2'} className={'m-auto'}>
+                    </Grid>
+                    <Grid lg={'2'} className={'m-auto'}>
                         <Option
                             item={['MTN', 'Vodfone', 'AirtelTigo']}
                             value={''}
                         />
-                    </Column>
+                    </Grid>
                 </Flexbox>
                 <Flexbox>
-                    <Column lg={'8'}>
+                    <Grid lg={'8'}>
                         <Table header={tableHeader}>
                             {
                                 Children.toArray(state.map((item:any) => (
@@ -84,8 +84,8 @@ const Content = () => {
 
                         </Table>
                         {loading && (<Spinner />)}
-                    </Column>
-                    <Column lg={'4'}>
+                    </Grid>
+                    <Grid lg={'4'}>
                         <Card className={css.cardStyling}>
                             <Heading type={'H3'} text={'Details'} className={'font-bold text-base'} />
                             <hr />
@@ -112,7 +112,7 @@ const Content = () => {
                                 <Paragraph text={itemSelect.customer?.phone} />
                             </Grid>
                         </Card>
-                    </Column>
+                    </Grid>
                 </Flexbox>
             </Card>
 

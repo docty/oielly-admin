@@ -4,10 +4,9 @@ import {
     Image,
     Cage,
     Flexbox,
-    Heading,
-    Grid,
+    Heading, 
     Card,
-    Column,
+    Grid,
     TableRow,
     Table, 
     TableItem,
@@ -150,11 +149,11 @@ const Content = () => {
             <Card className={css.cardStyling}>
                 <Toast {...response} refer={toastRef} className={'hidden'} />
                 <Flexbox className={"mb-8"} justifyContent={'between'} alignItems={'center'}>
-                    <Column>
+                    <Grid>
                         <Paragraph text={"Wed, Aug 13, 2020, 4:34PM"} />
                         <Paragraph text={'#' + state.orderId} />
-                    </Column>
-                    <Column>
+                    </Grid>
+                    <Grid>
                         <Option
                             item={["Pending", "Processing", "Delivering", "Complete"]}
                             value={status}
@@ -162,11 +161,11 @@ const Content = () => {
                             style={{ display: "inline", borderRadius: '5px 0 0 5px' }}
                         />
                         <Button icon={"icon-floppy-disk"} onClick={changeStatus} className={`text-white p-2 border border-green-500 ${statusBtnStyling}`} bgColor={'green'} />
-                    </Column>
+                    </Grid>
 
                 </Flexbox>
                 <Flexbox className={"divide-black"}>
-                    <Column lg={"4"}>
+                    <Grid lg={"4"}>
                         <Cage className={"inline-flex"}>
                             <Avatar
                                 icon={"icon-user"}
@@ -196,8 +195,8 @@ const Content = () => {
                                 />
                             </Cage>
                         </Cage>
-                    </Column>
-                    <Column lg={"4"}>
+                    </Grid>
+                    <Grid lg={"4"}>
                         <Cage className={"inline-flex"}>
                             <Avatar
                                 icon={"icon-info22"}
@@ -223,8 +222,8 @@ const Content = () => {
                                 <Paragraph text={state.status} className={"py-2 capitalize"} />
                             </Cage>
                         </Cage>
-                    </Column>
-                    <Column lg={"4"}>
+                    </Grid>
+                    <Grid lg={"4"}>
                         <Cage className={"inline-flex"}>
                             <Avatar
                                 icon={"icon-truck"}
@@ -245,10 +244,10 @@ const Content = () => {
                                 <Paragraph text={state.gpsAddress} className={"py-2"} />
                             </Cage>
                         </Cage>
-                    </Column>
+                    </Grid>
                 </Flexbox>
                 <Grid md={'3'} gap={'4'} >
-                    <Column className={'col-span-2'}>
+                    <Grid className={'col-span-2'}>
                         <Table header={tableHeader}>
                              
                                 {state.productId &&
@@ -273,8 +272,8 @@ const Content = () => {
                                     )))}
                             
                         </Table>
-                    </Column>
-                    <Column >
+                    </Grid>
+                    <Grid >
                         <Card className={'border'}>
                             <Paragraph text={"Payment Info"} className={'font-bold text-base mb-3 bg-gray-800 text-white p-1'} />
                             <Grid md={'2'} gap={'5'}>
@@ -292,7 +291,7 @@ const Content = () => {
                             <Button text={'Verify Payment'} bgColor={'pink'} className={'p-1 mt-3 text-white w-4/12'} onClick={paymentVerify} isLoading={loadingVerify} />
                             <Toast {...responseVerify} refer={toastVerifyRef} className={'hidden'} />
                         </Card>
-                    </Column>
+                    </Grid>
                 </Grid>
                 {loading && <Spinner type={'circle'} />}
             </Card>

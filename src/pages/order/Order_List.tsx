@@ -3,8 +3,7 @@ import { Link } from "react-router-dom";
 import {
     Avatar,
     Cage,
-    Card,
-    Column,
+    Card, 
     Flexbox,
     Heading,
     Option,
@@ -83,20 +82,20 @@ const Content = () => {
         <Cage className={css.contentStyling}>
             <Card className={css.cardStyling}>
                 <Flexbox className={"mb-8"} justifyContent={'between'}>
-                    <Column>
+                    <Grid>
                         <SearchField
                             placeholder={"Search"}
                             style={{ marginBottom: "0" }}
                             onValueChange={(e: any) => console.log(e)}
                         />
-                    </Column>
-                    <Column   >
+                    </Grid>
+                    <Grid   >
                         <Option
                             item={["pending", "processing", "delivering", "complete"]}
                             value={status}
                             onValueChange={(e: any) => setStatus(e.target.value)}
                         />
-                    </Column>
+                    </Grid>
                 </Flexbox>
                 <Grid lg={'4'} md={'3'} sm={'2'} gap={'3'}>
                     {

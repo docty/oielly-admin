@@ -3,17 +3,18 @@ import { style } from 'typestyle'
 import classnames from 'classnames';
 
 const Modal = (props: IModal) => {
-	if (props.isOpen) { 
-     return (<div className={modalWrapper} id={props.id}>
-			<div className={classnames([modelContainer, props.className])}>
-				<i className={['icon-cross', iconCross].join(' ')} onClick={props.setOpen}></i>
-				<h5 className={'font-bold text-base mb-3 mr-5'} style={props.style}>{props.title}</h5>
-				
-				{props.children}
-			</div> 
-		</div>
-	)
-	} else {return <></>}
+	if (props.isOpen) {
+		return (
+			<div className={modalWrapper} id={props.id}>
+				<div className={classnames([modelContainer, props.className])}>
+					<i className={['icon-cross', iconCross].join(' ')} onClick={props.setOpen}></i>
+					<h5 className={'font-bold text-base mb-3 mr-5'} style={props.style}>{props.title}</h5>
+
+					{props.children}
+				</div>
+			</div>
+		)
+	} else { return <></> }
 };
 
 const modalWrapper = style({
@@ -45,12 +46,12 @@ const iconCross = style({
 	right: '10px',
 	top: '16px',
 	fontSize: '1.3rem',
-	cursor: 'pointer',	 
+	cursor: 'pointer',
 })
 
 interface IModal extends Pick<HTMLAttributes<ReactNode>, 'children' | 'className' | 'style' | 'id'> {
 	title?: string;
 	isOpen?: boolean;
-	setOpen?: () => void	
+	setOpen?: () => void
 }
 export default Modal;

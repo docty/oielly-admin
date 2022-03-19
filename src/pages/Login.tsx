@@ -55,8 +55,7 @@ const Login = () => {
         />
         <Button
           text={"Login"}
-          className={'w-full text-white p-2 font-bold my-4'}
-          bgColor={"pink"}
+          className={'w-full text-white p-2 font-bold my-4'} 
           onClick={() => onLoginSubmit()}
         />
 

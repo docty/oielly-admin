@@ -1,5 +1,5 @@
 import oielly from '@synevix/oielly-gateway';
-import { Cage, Card, Column, Flexbox, Heading,   TableItem, TableRow, Table, Breadcrumb, Button, SearchField } from '@synevix/react-widget';
+import { Cage, Card, Grid, Flexbox, Heading,   TableItem, TableRow, Table, Breadcrumb, Button, SearchField } from '@synevix/react-widget';
 import { Children, useEffect, useState } from 'react';
 import Spinner from '../../components/Spinner';
 import * as css from '../../utility/styling';
@@ -48,13 +48,13 @@ const Content = () => {
         <Cage className={css.contentStyling}>
             <Card className={css.cardStyling}>
                 <Flexbox className={'mb-8'}>
-                    <Column lg={'4'} className={'mr-auto'}>
+                    <Grid lg={'4'} className={'mr-auto'}>
                         <SearchField
                             placeholder={"Search"}
                             style={{ marginBottom: '0' }}
                             onValueChange={(e:any) => console.log(e)}
                         />
-                    </Column>
+                    </Grid>
 
                 </Flexbox>
 
